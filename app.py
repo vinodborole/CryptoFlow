@@ -21,8 +21,8 @@ def fetch_crypto_prices():
 def home():
     return render_template('index.html')
 
-@app.route('/api/prices')
-def get_prices():
+@app.route('/api/price')
+def get_price():
     return jsonify(fetch_crypto_prices())
 
 if __name__ == '__main__':
