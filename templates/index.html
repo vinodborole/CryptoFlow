@@ -14,9 +14,9 @@
             .then(response => response.json())
             .then(data => {
                 const list = document.getElementById('crypto-list');
-                for (const [name, details] of Object.entries(data)) {
+                for (const [name, price] of Object.entries(data)) {
                     const listItem = document.createElement('li');
-                    listItem.textContent = `${name}: $${details.usd}`;
+                    listItem.textContent = `${name}: $${price}`;
                     list.appendChild(listItem);
                 }
             });
